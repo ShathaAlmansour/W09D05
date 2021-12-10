@@ -3,13 +3,13 @@ import './style.css'
 import {Link} from "react-router-dom";
 
 
-const REGISTER = () => {
+const Register = () => {
     return (
         <section className="section-login vvv">
         <div className="login-box">
           <form  className={"form"}>
             <div className="input-field">
-              <p>username</p>
+              <p>User Name</p>
               <input type="text" name="username" placeholder="User Name"
                      onChange={(e) => (e.target.value)}/>
             </div>
@@ -19,7 +19,7 @@ const REGISTER = () => {
                      onChange={(e) => (e.target.value)}/>
             </div>
             <div className="input-field">
-              <p>password</p>
+              <p>Password</p>
               <input type="password" name="password" placeholder="Your Password"
                      onChange={(e) => (e.target.value)}/>
             </div>
@@ -31,4 +31,4 @@ const REGISTER = () => {
     )
 }
 
-export default REGISTER
+export default Register
