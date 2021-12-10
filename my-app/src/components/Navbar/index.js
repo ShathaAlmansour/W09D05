@@ -13,8 +13,8 @@ const NAVBAR = () => {
                 <div className="routes">
                     <ul className="route-list">
                         <li><Link to={"/Home"} className="route-url" >Home</Link></li>
-                        <li><Link to="/Post">post</Link></li>
-                        <li><Link to="/commant">commant</Link></li>
+                        <li><Link to="/Post">Post</Link></li>
+                        <li><Link to="/commant">Comment</Link></li>
                     </ul>
                 </div>
                 <div className="account-icons">
