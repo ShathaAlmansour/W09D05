@@ -10,21 +10,21 @@ const REGISTER = () => {
           <form  className={"form"}>
             <div className="input-field">
               <p>username</p>
-              <input type="text" name="username" placeholder="ex.AliAlyahya"
+              <input type="text" name="username" placeholder="User Name"
                      onChange={(e) => (e.target.value)}/>
             </div>
             <div className="input-field">
               <p>Email</p>
-              <input type="text" name="email" placeholder="example@gmail.com"
+              <input type="text" name="email" placeholder="Your Email"
                      onChange={(e) => (e.target.value)}/>
             </div>
             <div className="input-field">
               <p>password</p>
-              <input type="password" name="password" placeholder="ex.12345"
+              <input type="password" name="password" placeholder="Your Password"
                      onChange={(e) => (e.target.value)}/>
             </div>
             <input type="submit" value="Login" className={"btn"}/>
-            <p><Link to="/login" className={"register"}>Already have an account ?</Link></p>
+            <p><Link to="/login" className={"register"}>Already have an account?</Link></p>
           </form>
         </div>
       </section>
