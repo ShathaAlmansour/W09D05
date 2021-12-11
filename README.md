@@ -9,11 +9,11 @@
 
 
 ## Description
-**the description** 
+**The description** 
 It is a link between backend and frontend and fetching the task from Mongoose Data Base, and before all that, you have to register and login to view your Post
 
 
-##How to use
+## How to use
 - **Signup:** At first, you need to register a new account
 - **Login:** As a user I can login to the platform so that I can log my exit points
 - **Logout:** As a user I can logout from the platform so no one else can use it
@@ -43,6 +43,9 @@ It is a link between backend and frontend and fetching the task from Mongoose Da
 **login**
 **register**
 **post**
+
+## UML Diagram (Front-end)
+![Diagram-Page-5 drawio](https://user-images.githubusercontent.com/92248175/145694558-c07c92eb-fdfe-47cb-b813-b08d824f3482.png)
 
 
 # Server / Backend
