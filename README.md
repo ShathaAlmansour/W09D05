@@ -9,7 +9,7 @@
 
 
 ## Description
-**the description** 
+**The description** 
 It is a link between backend and frontend and fetching the task from Mongoose Data Base, and before all that, you have to register and login to view your Post
 
 
