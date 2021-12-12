@@ -2,23 +2,21 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
-import Post from "./components/Post";
 import Regestier from "./components/Register";
 import Home from "./components/Home";
-
+import Post from './components/Post'
+import Desc from './components/Desc'
 
 function App() {
   return (
     <>
      <Navbar/>
-      <Routes>
-        
-        <Route path="/login" element={<Login/>} />
-        <Route path="/Navbar" element={<Navbar/>} />
-        <Route path="/Regestier" element={<Regestier />} />
-        <Route path="/Post" element={<Post/>} />
-        <Route exact path="/" element={<Home />} />
-      
+     <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path='/login' element={<Login />}/>
+        <Route exact path='/Regestier' element={<Regestier />}/>
+        <Route exact path="/post" element={<Post/>}/>
+        <Route exact path="/Desc" element={<Desc/>}/>
       </Routes>
       </>
   );
