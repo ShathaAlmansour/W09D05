@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { FcLike } from "react-icons/fc";
 import "./style.css";
 const Desc = () => {
   let id = useParams().id;
@@ -18,6 +19,7 @@ const Desc = () => {
   const [comment, setComment] = useState([]);
   const [likes, setLikes] = useState([]);
 
+  // Get post with comments and likes
   const getData = async () => {
     let res = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/getPostWithComments/${id}`,
@@ -42,6 +44,7 @@ const Desc = () => {
     // eslint-disable-next-line
   }, []);
 
+  // Button like
   const likePost = async () => {
     // eslint-disable-next-line
     let res = await axios.post(
@@ -50,6 +53,7 @@ const Desc = () => {
     getData();
   };
 
+  // Create new commnet
   const newComment = async (e) => {
     e.preventDefault();
     // eslint-disable-next-line
@@ -81,9 +85,7 @@ const Desc = () => {
 
   return (
     <div className="containerDesc">
-      <button onClick={() => navigate("/")} className="goBackBtn">
-        🔙
-      </button>
+      <button onClick={() => navigate("/")} className="goBackBtn">🔙</button>
       {post && (
         <div className="postDesc">
           <img
@@ -99,7 +101,7 @@ const Desc = () => {
       <hr />
       <div className="comments">
         <button onClick={likePost} className="likeBtn">
-          ❤️
+        <FcLike/>
         </button>
         <p>Likes: {likes}</p>
         <h1>Comments</h1>

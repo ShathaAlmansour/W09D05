@@ -12,10 +12,14 @@
   .btnDelete {
     background-color: rgba(255, 0, 0, 0.253);
     cursor: pointer;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 3px 0px rgba(17, 36, 212, 0.75);
     width: 4rem;
     height: 1.8rem;
     border: 0;
+  }
+
+  .containerDesc{
+    margin-top: 30vh;
   }
   
   .comments {
@@ -31,10 +35,18 @@
     border: 0;
     background-color: white;
     cursor: pointer;
+    /* display: block;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    border-radius: 999px;
+    overflow: visible;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent; */
   }
   
   .postCommentBtnn {
-    background-color: rgba(0, 255, 64, 0.253);
+    background-color: rgba(87, 87, 87, 0.253);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
     border: 0;
     height: 2.4rem;
@@ -54,3 +66,4 @@
     cursor: pointer;
   
   }
+  

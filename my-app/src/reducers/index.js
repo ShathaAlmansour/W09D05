@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import signIn from "./Login";
+import signIn from "./login";
 
 const reducers = combineReducers({ signIn });
 
@@ -9,4 +9,6 @@ const store = () => {
 };
 
 export default store();
+
+
 

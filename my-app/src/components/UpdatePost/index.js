@@ -12,6 +12,7 @@ const UpdatePost = ({ postId, userId, getPost }) => {
   //
   const [toggle, setToggle] = useState(false);
 
+  // update post
   const updatePost = async (e) => {
     e.preventDefault();
     if (e.target[0].value) {
@@ -45,14 +46,9 @@ const UpdatePost = ({ postId, userId, getPost }) => {
           {state.signIn.user.role === "61a734cd947e8eba47efbc68" ||
           state.signIn.user._id === userId ? (
             <form onSubmit={(e) => updatePost(e)}>
+              <input type="text" name="update" placeholder=" update..." className="val" />
               <input
-                type="text"
-                name="update"
-                placeholder=" update..."
-                className="val"
-              />
-              <input
-                className="btnUpdate"
+              className="btnUpdate"
                 type="submit"
                 value="Update"
                 style={{ cursor: "pointer" }}
