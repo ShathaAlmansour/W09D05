@@ -27,17 +27,17 @@ const Home = () => {
   };
 
   return (
-    <div className="pulse">
+    <div>
       <div className="homeContainer">
         <h1 className="wel"> Welcome to your website </h1>
 
         <div className="btns">
-          <button>
+          <button className="pulse">
             <Link className="s" style={{ textDecoration: "none" }} to="login">
               Login
             </Link>
           </button>
-          <button>
+          <button className="pulse">
             <Link
               className="s"
               style={{ textDecoration: "none" }}
@@ -55,7 +55,7 @@ const Home = () => {
           />
           <br />
           <button
-            style={{ textDecoration: "none", color: "black", width: "100%" }}
+            style={{ textDecoration: "none", width: "100%" }}
             onClick={postss}
           >
             {" "}
