@@ -5,17 +5,14 @@ import axios from "axios";
 import './style.css'
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-
-
-
 const Home = () => {
   const navigate = useNavigate();
 
   const responseGoogle=async(response)=>{
     console.log(response.profileObj);
     const result = await axios.post(`${BASE_URL}/login`, {
-      email: "alyahya473@gmail.com",
-      password: "Ww1234512345",
+      email: "yourEmail@gmail.com",
+      password: "yourPassword123",
     }, {withCredentials: true});
     navigate('/posts')
   }
@@ -27,7 +24,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="homeContainer">
-      <h1 className="wel"> Wlcome to your website </h1>
+     <b><h1 className="wel"> Welcome to your website </h1></b>
         <div className="btns">
           <button className="pulse">
             <Link className="s" style={{ textDecoration: "none" }} to="login">
@@ -46,7 +43,7 @@ const Home = () => {
             // onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
           /><br/>
-       <button className="pulse" style={{  color:'black', width:"90%" }} onClick={postss}> Viwe Your Post </button>
+       <button className="pulse" style={{ textDecoration: "none" , width:"90%" }} onClick={postss}> Viwe Your Posts </button>
         </div>
       </div>
     </div>

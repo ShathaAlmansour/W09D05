@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import './style.css'
+import PasswordChecklist from "react-password-checklist";
+
 // const URL = "http://localhost:5000";
 
 // const BASE_URL = process.env.REACT_APP_BASE_URL
@@ -52,7 +54,27 @@ const REGISTER = () => {
         <input type="password" name="password" />
         <label htmlFor="password2">Confirm Password:</label>
         <input type="password" name="password2" />
-        <button type="submit">Sign up</button>
+        <button type="submit" id="signupSubmitButton">Sign up</button>
+        <PasswordChecklist
+            rules={[
+              "minLength",
+              "specialChar",
+              "number",
+              "capital",
+              "lowercase",
+            ]}
+            minLength={6}
+            value={password}
+            onChange={(isValid) => {
+              if (isValid) {
+                const button = document.querySelector("#signupSubmitButton");
+                button.disabled = false;
+              } else {
+                const button = document.querySelector("#signupSubmitButton");
+                button.disabled = true;
+              }
+            }}
+          />
       </form>
       <p>{err}</p>
       <button
